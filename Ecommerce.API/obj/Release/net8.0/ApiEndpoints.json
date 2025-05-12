@@ -1,0 +1,279 @@
+[
+  {
+    "ContainingType": "Ecommerce.API.Controllers.BrandController",
+    "Method": "CreateBrand",
+    "RelativePath": "api/Brand/CreateBrand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.BrandController",
+    "Method": "EditBrand",
+    "RelativePath": "api/Brand/EditBrand",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.BrandDTOs.EditBrandDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.ProductController",
+    "Method": "AddProduct",
+    "RelativePath": "api/Product/CreateNewProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.ProductDTOs.NewProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.ProductController",
+    "Method": "SoftDeleteProductByName",
+    "RelativePath": "api/Product/DeleteByName",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.ProductDTOs.ProductIdentifierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.ProductController",
+    "Method": "EditProduct",
+    "RelativePath": "api/Product/EditProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.ProductDTOs.EditProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.ProductController",
+    "Method": "GetAllProductsByStoreAndBrand",
+    "RelativePath": "api/Product/GetAllByStoreAndBrand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storeName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "brandName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.ProductController",
+    "Method": "RecoverProductByName",
+    "RelativePath": "api/Product/RecoverByName",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.ProductDTOs.ProductIdentifierDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.StoreController",
+    "Method": "CreateStore",
+    "RelativePath": "api/Store/CreateStore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "store",
+        "Type": "Domain.DTOs.StoreDTOs.NewStoreDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.StoreController",
+    "Method": "DeleteStoreByName",
+    "RelativePath": "api/Store/DeleteByName/{storeName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storeName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.StoreController",
+    "Method": "UnassignBrand",
+    "RelativePath": "api/Store/UnassignBrand/{storeName}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "storeName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.StoreController",
+    "Method": "UpdateStore",
+    "RelativePath": "api/Store/UpdateStore",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.StoreDTOs.UpdateStoreDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/User/ChangePassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.UserDTOs.ChangePasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/User/confirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.UserDTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/User/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Domain.DTOs.UserDTOs.NewUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/User/ResetPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.UserDTOs.ResetPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.API.Controllers.UserController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/User/UpdateProfile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Domain.DTOs.UserDTOs.UpdateProfileDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

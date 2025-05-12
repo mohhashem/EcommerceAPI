@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecommerce.API</name>
+    </assembly>
+    <members>
+        <member name="M:Ecommerce.API.Controllers.BrandController.CreateBrand(System.String)">
+            <summary>
+            Creates a new brand.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.BrandController.EditBrand(Domain.DTOs.BrandDTOs.EditBrandDto)">
+            <summary>
+            Updates the name of an existing brand.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.ProductController.AddProduct(Domain.DTOs.ProductDTOs.NewProductDTO)">
+            <summary>
+            Adds a new product to the specified store and brand.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.ProductController.SoftDeleteProductByName(Domain.DTOs.ProductDTOs.ProductIdentifierDTO)">
+            <summary>
+            Soft deletes a product by name.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.ProductController.RecoverProductByName(Domain.DTOs.ProductDTOs.ProductIdentifierDTO)">
+            <summary>
+            Recovers a soft deleted product by name.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.ProductController.EditProduct(Domain.DTOs.ProductDTOs.EditProductDTO)">
+            <summary>
+            Edits an existing product's details.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.ProductController.GetAllProductsByStoreAndBrand(System.String,System.String)">
+            <summary>
+            Retrieves all products for a given store and brand.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.StoreController.CreateStore(Domain.DTOs.StoreDTOs.NewStoreDto)">
+            <summary>
+            Creates a new store for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.StoreController.DeleteStoreByName(System.String)">
+            <summary>
+            Soft deletes (deactivates) a store by name for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.StoreController.UpdateStore(Domain.DTOs.StoreDTOs.UpdateStoreDto)">
+            <summary>
+            Updates store details for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.StoreController.UnassignBrand(System.String)">
+            <summary>
+            Unassigns a brand from a store for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.RegisterUser(Domain.DTOs.UserDTOs.NewUserDTO)">
+            <summary>
+            Registers a new user.
+            </summary>
+            <param name="user">User registration details.</param>
+            <returns>Status of registration.</returns>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.Login(Domain.DTOs.UserDTOs.LoginDTO)">
+            <summary>
+            Authenticates a user and returns a JWT token.
+            </summary>
+            <param name="dto">Login credentials.</param>
+            <returns>JWT token if login is successful.</returns>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.ChangePassword(Domain.DTOs.UserDTOs.ChangePasswordDTO)">
+            <summary>
+            Changes the authenticated user's password.
+            </summary>
+            <param name="dto">Change password data.</param>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.ResetPassword(Domain.DTOs.UserDTOs.ResetPasswordDTO)">
+            <summary>
+            Resets the authenticated user's password.
+            </summary>
+            <param name="dto">Reset password data.</param>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.UpdateProfile(Domain.DTOs.UserDTOs.UpdateProfileDTO)">
+            <summary>
+            Updates the authenticated user's profile.
+            </summary>
+            <param name="dto">New profile details.</param>
+        </member>
+        <member name="M:Ecommerce.API.Controllers.UserController.ConfirmEmail(System.String)">
+            <summary>
+            Sends a confirmation email and marks email as confirmed.
+            </summary>
+            <param name="email">Email to confirm.</param>
+            <returns>Status message of confirmation.</returns>
+        </member>
+    </members>
+</doc>
