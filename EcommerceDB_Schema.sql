@@ -1,0 +1,66 @@
+
+CREATE DATABASE EcommerceDB;
+GO
+
+USE EcommerceDB;
+GO
+
+
+CREATE TABLE Brand (
+    BrandID INT PRIMARY KEY IDENTITY(1,1),
+    BrandName NVARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE [User] (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50),
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(200),
+    IsEmailConfirmed BIT DEFAULT 0,
+    ProfilePictureURL NVARCHAR(255),
+    StoreID INT NULL  
+);
+
+
+CREATE TABLE Store (
+    StoreID INT PRIMARY KEY IDENTITY(1,1),
+    UserID INT NOT NULL,
+    StoreName NVARCHAR(100) NOT NULL UNIQUE,
+    LogoURL NVARCHAR(255),
+    BrandID INT NULL, 
+    IsActive BIT NOT NULL DEFAULT 1,
+
+    FOREIGN KEY (UserID) REFERENCES [User](UserID),
+    FOREIGN KEY (BrandID) REFERENCES Brand(BrandID)
+);;
+
+ALTER TABLE [User]
+ADD CONSTRAINT FK_User_Store FOREIGN KEY (StoreID) REFERENCES Store(StoreID);
+
+
+
+CREATE TABLE Address (
+    AddressID INT PRIMARY KEY IDENTITY(1,1),
+    StoreID INT NOT NULL,
+    AddressLine NVARCHAR(255),
+    City NVARCHAR(50),
+    State NVARCHAR(50),
+    ZipCode INT,
+    IsActive BIT DEFAULT 1,
+
+    FOREIGN KEY (StoreID) REFERENCES Store(StoreID)
+);
+
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY IDENTITY(1,1),
+    StoreID INT NOT NULL,
+    BrandID INT NOT NULL,
+    ProductName NVARCHAR(100),
+    Price DECIMAL(18, 2),
+    ImageURL NVARCHAR(255),
+    IsDeleted BIT NOT NULL DEFAULT 0,
+
+    FOREIGN KEY (StoreID) REFERENCES Store(StoreID),
+    FOREIGN KEY (BrandID) REFERENCES Brand(BrandID)
+);
