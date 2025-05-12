@@ -69,7 +69,8 @@ dotnet build
 dotnet run --project Ecommerce.API
 
 🔐 Authentication
-Register using your email, then confirm the email using swagger to be able to use the Login endpoint to get a JWT token.
+Register using your email, then confirm the email using swagger (An email will be sent to my mailtrap account and will automatically mark the email as confirmed in the db to be able to login, you can see the email sent through https://mailtrap.io/ email: mohamad.accuv@gmail.com password: sFrcM!VmWcMEh9N )
+to be able to use the Login endpoint to get a JWT token.
 Add the token to Swagger under the Authorize button to access protected endpoints.
 
 🧊 Redis Configuration
